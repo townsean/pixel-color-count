@@ -4,7 +4,7 @@
 
 Pixel Color Count is a Python script that sums the total number of pixels per a unique color.
 
-![sample output for pixel-color-count.py](sample-output.png)
+![sample output for pixel-color-count.py](sample-output.png "Sample output for pixel-color-count.py")
 
 ## Motiviatation
 
