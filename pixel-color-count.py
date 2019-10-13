@@ -53,9 +53,9 @@ def main():
     font = ImageFont.truetype("arialbd.ttf", font_size)
 
     # draw title for legend if applicable
-    text_width = text_height = 0
+    text_height = 0
     if args.title is not None:
-        text_width, text_height = draw.textsize(args.title, font=font)
+        _, text_height = draw.textsize(args.title, font=font)
         draw.text((0, 0), args.title, font=font, fill="black")
 
     for color, count in color_count.items():
