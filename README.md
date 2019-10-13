@@ -41,8 +41,13 @@ Skip counting pixels of this color. Currently only supports one tuple, should be
 ```
 Title for the image legend
 
-## Built With
+## Future Plans
+The pixel counter is in a pretty useful state as is, but there are several upgrades that I hope to implement whenever time permits:
+* Add support for mutliple ignored colors
+* Create a web-based version of the pixel counter
+* REFACTOR! Currently, all of the meat of the script sits in the `main()` function. I would like to create a cleaner implementation.
 
+## Built With
 Dependencies for the script are:
 * [Pillow, the friendly fork of PIL](https://python-pillow.org/) for basic image manipulation
 * [webcolors](https://pypi.org/project/webcolors/) for displaying human readable color names for RGB values when possible
