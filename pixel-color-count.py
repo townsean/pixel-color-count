@@ -1,5 +1,6 @@
 # pixel-color-count.py - Gets a sum of pixels per unique color
 import argparse
+from ast import literal_eval
 
 try:
     from PIL import Image, ImageDraw, ImageFont
@@ -15,9 +16,10 @@ except ImportError:
 def main():
     parser = argparse.ArgumentParser(description='Calculates the sum of pixels per a color')
     parser.add_argument('image', nargs='?', default='.', help='The image to sum the pixels per a color of')
-    # parser.add_argument('-i', '--ignore-color', type=tuple, help='Skip counting pixels of this color')
+    parser.add_argument('-i', '--ignore-color', help='Skip counting pixels of this color')
 
     args = parser.parse_args()
+    ignore_color = literal_eval(args.ignore_color)
     color_count = {}
 
     with Image.open(args.image) as image:
@@ -40,14 +42,14 @@ def main():
     color_index = 1
     
     margin = 10
-    font = ImageFont.truetype("arialbd.ttf", 20)
     rect_width = 25
     rect_outline_width = 2
     legend_img = Image.new("RGBA", (200, len(color_count) * (rect_width + rect_outline_width + margin)))
     draw = ImageDraw.Draw(legend_img)
+    font = ImageFont.truetype("arialbd.ttf", 20)
     for color, count in color_count.items():
-        # if color == args.ignore-color:
-        #    pass
+        if color == ignore_color:
+            continue
 
         try:
             color_name = webcolors.rgb_to_name(color)
@@ -66,7 +68,7 @@ def main():
 
         color_index += 1
 
-    legend_img.save(r'legend.png', mode="w")
+    legend_img.save('legend.png', mode="w")
 
 if __name__ == '__main__':
     main()
