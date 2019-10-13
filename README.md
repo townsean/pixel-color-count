@@ -17,13 +17,19 @@ I'm a [maker](https://www.ashleygrenon.com/project-gallery/) and love creating [
 python pixel-color-count.py supermario3-8-bit-boo.png -i (0,255,255)
 ```
 
+## Sample Output
+
+In addtional to displaying the color with the number of pixels, pixel-color-count.py will generate an image feature a legend of the color, color name (if applicable) or color in (r, g, b) format, and the pixel count. 
+
+![sample output for pixel-color-count.py](sample-legend.png "Sample output for pixel-color-count.py")
+
 ## Command Line Options
 
 ```
 -i <RGB value>
 --ignore-color
 ```
-Skip counting pixels of this color **[Not implement]** (ran into some technical difficulties, will revisit when time permits) 
+Skip counting pixels of this color **[Not implemented]** (ran into some technical difficulties, will revisit when time permits) 
 
 
 ## Built With
