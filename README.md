@@ -29,8 +29,14 @@ In addtional to displaying the color with the number of pixels, pixel-color-coun
 -i <RGB value as a tuple>
 --ignore-color <RGB value as a tuple>
 ```
-Skip counting pixels of this color **[Not implemented]** (ran into some technical difficulties, will revisit when time permits) 
+Skip counting pixels of this color. Currently only supports one tuple, should be a quick change to upgrade it support a list of tuples. 
 
+
+```
+-t <title>
+--title <title>
+```
+Title for the image legend [**Not implemented**]
 
 ## Built With
 
