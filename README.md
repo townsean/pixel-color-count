@@ -26,8 +26,8 @@ In addtional to displaying the color with the number of pixels, pixel-color-coun
 ## Command Line Options
 
 ```
--i <RGB value>
---ignore-color
+-i <RGB value as a tuple>
+--ignore-color <RGB value as a tuple>
 ```
 Skip counting pixels of this color **[Not implemented]** (ran into some technical difficulties, will revisit when time permits) 
 
