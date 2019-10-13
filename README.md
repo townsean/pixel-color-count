@@ -39,7 +39,7 @@ Skip counting pixels of this color. Currently only supports one tuple, should be
 -t <title>
 --title <title>
 ```
-Title for the image legend [**Not implemented**]
+Title for the image legend
 
 ## Built With
 
