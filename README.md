@@ -14,7 +14,7 @@ I'm a [maker](https://www.ashleygrenon.com/project-gallery/) and love creating [
 
 ## Sample Usage
 ```
-python pixel-color-count.py supermario3-8-bit-boo.png -i (0,255,255)
+python pixel-color-count.py supermario3-8-bit-boo.png -i (0,255,255) -t "8-Bit Boo Pixel Count:"
 ```
 
 ## Sample Output
