@@ -12,6 +12,11 @@ Pixel Color Count is a Python script that sums the total number of pixels per a 
 
 I'm a [maker](https://www.ashleygrenon.com/project-gallery/) and love creating [8-bit art](https://www.ashleygrenon.com/tag/8-bit/), mostly with wood. I have a new project in the works where I need an exact count of each pixel per a color. I started to manually count them before I stopped myself and thought, *why don't I just write a script to automate this*!? Thus [pixel-color-count.py](https://github.com/townsean/pixel-color-count/blob/master/pixel-color-count.py) was born!
 
+## Sample Usage
+```
+python pixel-color-count.py supermario3-8-bit-boo.png -i (0,255,255)
+```
+
 ## Command Line Options
 
 ```
