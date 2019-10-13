@@ -46,7 +46,7 @@ def main():
     rect_width = 25
     rect_outline_width = 2
     font_size = 20
-    img_width = 200
+    img_width = 250
     img_height = len(color_count) * (rect_width + rect_outline_width + margin) + (0 if args.title is None else font_size)
     legend_img = Image.new("RGBA", (img_width, img_height))
     draw = ImageDraw.Draw(legend_img)    
@@ -56,7 +56,7 @@ def main():
     text_width = text_height = 0
     if args.title is not None:
         text_width, text_height = draw.textsize(args.title, font=font)
-        draw.text((text_width / 2, img_height - text_height), args.title, font=font, fill="black")
+        draw.text((0, 0), args.title, font=font, fill="black")
 
     for color, count in color_count.items():
         if color == ignore_color:
@@ -71,8 +71,8 @@ def main():
         print('{}.) {}: {}'.format(color_index, color_name, count))        
 
         # draw square for color legend
-        y0 = rect_width * (color_index - 1) + margin * color_index
-        y1 = rect_width * color_index + margin * color_index
+        y0 = rect_width * (color_index - 1) + margin * color_index + text_height
+        y1 = rect_width * color_index + margin * color_index + text_height
         draw.rectangle([(0, y0), (rect_width, y1)], fill=color, outline="black", width=2)
 
         # draw color name next and pixel count for legend colors
