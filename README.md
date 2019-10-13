@@ -19,7 +19,7 @@ python pixel-color-count.py supermario3-8-bit-boo.png -i (0,255,255) -t "8-Bit B
 
 ## Sample Output
 
-In addtional to displaying the color with the number of pixels, pixel-color-count.py will generate an image feature a legend of the color, color name (if applicable) or color in (r, g, b) format, and the pixel count. 
+In addtion to displaying the color with the number of pixels, pixel-color-count.py will generate an image feature a legend of the color, color name (if applicable) or color in (r, g, b) format, and the pixel count. 
 
 ![sample output for pixel-color-count.py](sample-legend.png "Sample output for pixel-color-count.py")
 
@@ -40,6 +40,10 @@ Skip counting pixels of this color. Currently only supports one tuple, should be
 --title <title>
 ```
 Title for the image legend
+
+### Generate Legend Image Optionallly [Not Implemented]
+
+This command line option isn't implemented and not fully flushed out yet, but I thought there may be some cases where the console output is sufficient and you don't want an image. 
 
 ## Future Plans
 The pixel counter is in a pretty useful state as is, but there are several upgrades that I hope to implement whenever time permits:
