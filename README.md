@@ -25,12 +25,15 @@ In addtional to displaying the color with the number of pixels, pixel-color-coun
 
 ## Command Line Options
 
+### Ignore Color
+
 ```
 -i <RGB value as a tuple>
 --ignore-color <RGB value as a tuple>
 ```
 Skip counting pixels of this color. Currently only supports one tuple, should be a quick change to upgrade it support a list of tuples. 
 
+### Title
 
 ```
 -t <title>
