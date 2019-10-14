@@ -41,15 +41,19 @@ Skip counting pixels of this color. Currently only supports one tuple, should be
 ```
 Title for the image legend
 
-### Generate Legend Image Optionallly [Not Implemented]
+### Generate Legend Color Swatch Image 
 
-This command line option isn't implemented and not fully flushed out yet, but I thought there may be some cases where the console output is sufficient and you don't want an image. 
+```
+-l <output-file>
+--legend-image <output-file>
+```
+Generate an image with color swatches paired with the pixel count
 
 ## Future Plans
 The pixel counter is in a pretty useful state as is, but there are several upgrades that I hope to implement whenever time permits:
 * Add support for mutliple ignored colors
 * Create a web-based version of the pixel counter
-* **REFACTOR!** Currently, all of the meat of the script sits in the `main()` function. I would like to create a cleaner implementation.
+* **REFACTOR!** ~~Currently, all of the meat of the script sits in the `main()` function.~~ I would like to create a cleaner implementation.
 
 ## Built With
 Dependencies for the script are:
