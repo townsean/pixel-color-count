@@ -15,6 +15,14 @@ except ImportError:
     exit("This script uses webcolors for displaying named colors. Install with pip install webcolors")
 
 def count_pixels(filename):
+    """
+    Returns a count of pixels per a unique color
+
+    Args:
+        filename (str): the image to count the number of pixels of
+    Returns:
+        a key-value pairing of the rgb color value and the number of times the color was present in the image
+    """
     color_count = {}
     with Image.open(filename) as image:
         width, height = image.size
@@ -33,6 +41,17 @@ def count_pixels(filename):
     return color_count
 
 def create_legend_image(filename, colors, title, ignore_color):
+    """
+    Create an image of color swatches paired with a color name and number
+
+    Args:
+        filename (str): the name of the legend image file
+        colors (dict): a key-value pairing of the color name and count
+        title (str): a title for the legend image
+        ignore_color (tuple): do not add this color to the legend image
+    Returns:
+        None
+    """
     margin = 10
     rect_width = 25
     rect_outline_width = 2
