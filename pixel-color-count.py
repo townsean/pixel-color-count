@@ -58,7 +58,7 @@ def create_legend_image(filename, colors, title, ignore_color):
     font_size = 20
     img_width = 250
     img_height = len(colors) * (rect_width + rect_outline_width + margin) + (0 if title is None else font_size)
-    legend_img = Image.new("RGBA", (img_width, img_height))
+    legend_img = Image.new("RGBA", (img_width, img_height), "white")
     draw = ImageDraw.Draw(legend_img)    
     font = ImageFont.truetype("arialbd.ttf", font_size)
     
@@ -121,6 +121,8 @@ def main():
             color_name = color
 
         print('{}.) {}: {}'.format(color_index, color_name, count))
+
+        color_index += 1
 
 if __name__ == '__main__':
     main()
