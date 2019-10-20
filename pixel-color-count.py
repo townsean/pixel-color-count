@@ -124,5 +124,9 @@ def main():
 
         color_index += 1
 
+    # Display the total number of pixels not ignored
+    print('-' * 30)
+    print('\t{} pixels'.format(sum(color_count[color] for color in color_count if color != ignore_color)))
+
 if __name__ == '__main__':
     main()
