@@ -52,7 +52,7 @@ Generate an image with color swatches paired with the pixel count
 ## Future Plans
 The pixel counter is in a pretty useful state as is, but there are several upgrades that I hope to implement whenever time permits:
 * Add support for mutliple ignored colors
-* Create a web-based version of the pixel counter
+* ~~Create a web-based version of the pixel counter~~ [Done, [view the source here](https://github.com/townsean/canvas-pixel-color-counter)]
 * **REFACTOR!** ~~Currently, all of the meat of the script sits in the `main()` function.~~ I would like to create a cleaner implementation.
 
 ## Built With
